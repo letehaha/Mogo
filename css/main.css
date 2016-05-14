@@ -308,14 +308,17 @@
     padding: 25px;
     border-bottom: 1px solid #e5e5e5;
     position: relative; }
-    .services__sect-content_accordeon_item h3:after {
+    .services__sect-content_accordeon_item h3 span {
       position: absolute;
-      content: '';
       background: url("../img/icons/services-arrow-bot.png") no-repeat;
       left: 92%;
       width: 23px;
-      height: 15px; }
+      height: 15px;
+      -webkit-transition: .2s ease-out;
+              transition: .2s ease-out; }
   .services__sect-content_accordeon_item p {
+    -webkit-transition: .5s ease-out;
+            transition: .5s ease-out;
     display: none;
     padding: 10px;
     font: italic 300 15px/24px "Roboto", "Arial", sans-serif;

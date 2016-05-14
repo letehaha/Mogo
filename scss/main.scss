@@ -274,16 +274,18 @@
 		padding: 25px;
 		border-bottom: 1px solid #e5e5e5;
 		position: relative;
-		&:after{
+		span{
 			position: absolute;
-			content: '';
 			background: url('../img/icons/services-arrow-bot.png') no-repeat;
 			left: 92%;
 			width: 23px;
 			height: 15px;
+			transition: .2s ease-out;
+			// transform: rotate(180deg);
 		}
 	}
 	p{
+		transition: .5s ease-out;
 		display: none;
 		padding: 10px;
 		font: italic 300 15px/24px $Roboto;
