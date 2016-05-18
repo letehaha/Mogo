@@ -5,6 +5,7 @@
   <title> </title>
   <link rel="stylesheet" href="css/normalize.css"/>
   <link rel="stylesheet" href="css/main.css"/>
+  <link rel="stylesheet" href="libs/slick/slick.css">
   <link rel="stylesheet" href="fonts/fonts.css"/>
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.2/css/font-awesome.min.css">
   <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no"/>
@@ -56,16 +57,16 @@
             <li><a href="#service">Service</a></li>
             <li><a href="#works">Work</a></li>
             <li><a href="#blog">Blog</a></li>
-            <li><a href="#">Contact</a></li>
-            <li class="top-nav__list_icon"><a href="#">icon</a></li>
-            <li class="top-nav__list_icon"><a href="#">icon</a></li>
+            <li><a href="#footer">Contact</a></li>
+            <li class="top-nav__list_icon"><a href="#"><img src="img/icons/banner_shop.png" alt=""></a></li>
+            <li class="top-nav__list_icon"><a href="#"><img src="img/icons/banner_glass.png" alt=""></a></li>
           </ul>
         </div>
       </nav>
       <div class="header-intro">
         <h2>Creative Template</h2>
         <h1>Welcome<br>to MoGo</h1>
-        <a href="#">Learn more</a>
+        <a href="#about">Learn more</a>
       </div>
     </div>
   </header>
@@ -251,6 +252,20 @@
     </div>
   </section>
 
+  <section id="first_slide" class="first_slide">
+    <div class="container">
+      <div class="first_slide_wrapper">
+        <div class="first_slide_wrapper_img">
+          <img src="img/icons/quote.png">
+        </div>
+        <div class="first_slide_wrapper_descr">
+          <p>“Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.”</p>
+          <h4>Jon Doe</h4>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <section id="team" class="team">
     <div class="container">
       <div class="sect-title">
@@ -376,6 +391,20 @@
             <h4>creatively designed</h4>
             <span>Lorem ipsum dolor sit</span>
           </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+    <section id="second_slide" class="second_slide">
+    <div class="container">
+      <div class="second_slide_wrapper">
+        <div class="second_slide_wrapper_img">
+          <img src="img/photo/testimonial.png">
+        </div>
+        <div class="second_slide_wrapper_descr">
+          <p>“Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.”</p>
+          <h4>Joshua Earle</h4>
         </div>
       </div>
     </div>
@@ -513,9 +542,50 @@
       <h2>Open map</h2>
     </div>
   </section>
+
+  <footer id="footer" class="footer">
+    <div class="container">
+      <div class="footer_wrapper">
+        <div class="footer_wrapper_item footer_wrapper_item_one">
+          <div class="footer_wrapper_item_one_wrapper">
+            <h2>MoGo</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+            <h3><span>15k</span> followers</h3>
+          </div>
+          <div class="footer_wrapper_item_one_social">
+            <span>Follow Us:</span>
+            <ul>
+              <li><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+              <li><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+              <li><a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
+              <li><a href="#"><i class="fa fa-pinterest-p" aria-hidden="true"></i></a></li>
+              <li><a href="#"><i class="fa fa-google-plus" aria-hidden="true"></i></a></li>
+              <li><a href="#"><i class="fa fa-youtube-play" aria-hidden="true"></i></a></li>
+              <li><a href="#"><i class="fa fa-dribbble" aria-hidden="true"></i></a></li>
+              <li><a href="#"><i class="fa fa-tumblr" aria-hidden="true"></i></a></li>
+            </ul>
+          </div>
+          <div class="footer_wrapper_item_one_form">
+            <form action="#">
+              <input type="email" placeholder="Your Email..">
+              <input type="submit" value="SUBSCRIBE">
+            </form>
+          </div>
+        </div>
+        <div class="footer_wrapper_item footer_wrapper_item_two">
+          
+        </div>
+        <div class="footer_wrapper_item footer_wrapper_item_three"></div>
+      </div>
+      <div class="footer_info">
+        <h4>© 2016 MoGo free PSD template by <span>Laaqiq</span></h4>
+      </div>
+    </div>
+  </footer>
   
   <script src="libs/jquery/jquery.min.js"></script>
-  <script src="libs/scroll2id/PageScroll2id.min.js"></script>
+  <script src="libs/jquerySmoothScroll/jquerySmoothScroll.min.js"></script>
+  <script src="libs/slick/slick.min.js"></script>
   <script src="js/common.js"></script>
 </body>
 </html>
