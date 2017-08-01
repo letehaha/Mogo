@@ -1,0 +1,24 @@
+=respond-to($media)
+  @media only screen and (max-width: $media)
+    @content
+
+=respond-from($media)
+  @media only screen and (min-width: $media)
+    @content
+
+=respond-to-height($height)
+  @media all and (max-height: $height)
+    @content
+
+=force-GPU
+  transform: translateZ(0)
+
+=clearfix
+  &:after
+    clear: both
+    content: ''
+    display: table
+
+=font-smoothing
+  -webkit-font-smoothing: antialiased
+  -moz-osx-font-smoothing: grayscale

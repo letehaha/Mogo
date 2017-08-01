@@ -1,30 +1,47 @@
 $(function() {
 
-	$(".services__sect-content_accordeon_item:first-child p").addClass('active');
-	$(".services__sect-content_accordeon_item h3").click(function(){
-		$(".services__sect-content_accordeon_item p").removeClass('active');
-		$(this).next().addClass('active');
-		if($('.services__sect-content_accordeon_item p').hasClass('active')){
-			$(this).prev().children().css('transform','rotate(180deg)')
-		} else{
-			
-		}
-	});
- 	
+  var $mainBurger = $('.main-nav__burger'),
+      $menuList   = $('.main-nav__list');
 
- 	$("a[href*='#']").smoothScroll({speed: 1000});
-	
- 	$(".first_slide_slider").slick({
- 		dots: true,
-		speed: 500
- 	});
+  $('.services__sect-content_accordeon_item:first-child p').addClass('active');
 
- 	$(".burger-menu").click(function (e) {
-		$(this).toggleClass("menu-on");
-		$('.burger-list').fadeToggle('burger-list-active');
-		$('.burger_elem').click(function(e) {
-			$(".burger-menu").toggleClass("menu-on");
-			$('.burger-list').fadeToggle('burger-list-active');
-		});
-	});
+  $('.services__sect-content_accordeon_item h3').click(function(){
+    $('.services__sect-content_accordeon_item p').removeClass('active');
+    $(this).next().addClass('active');
+
+    if ($('.services__sect-content_accordeon_item p').hasClass('active'))
+      $(this).prev().children().css('transform','rotate(180deg)')
+
+  });
+
+  $('.first_slide_slider').slick({
+    dots: true,
+    speed: 500
+  });
+
+  $mainBurger.click(function (e) {
+    var $this = $(this);
+
+    $this.toggleClass('main-nav__burger--is-open');
+    $menuList.toggleClass('main-nav__list--is-open');
+
+    $('.burger_elem').click(function(e) {
+      $('.burger-menu').toggleClass('menu-on');
+      $('.burger-list').fadeToggle('burger-list-active');
+    });
+  });
+
+  $('.main-nav__link').click(function(e) {
+    var link = $(this).attr('href');
+    
+    e.preventDefault();
+
+    $('html,body').stop().animate({ scrollTop: $(link).offset().top - 60 }, 500);
+    
+    $mainBurger.removeClass('main-nav__burger--is-open');
+    $menuList.removeClass('main-nav__list--is-open');
+  
+  });
+
+
 });
