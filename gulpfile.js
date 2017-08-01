@@ -1,27 +1,27 @@
-var gulp 		= require('gulp'),
-    browserSync = require('browser-sync'),
-    sass 		= require('gulp-sass'),
-    cssnano     = require('gulp-cssnano'),
-    del         = require('del'),
-    autoprefixer= require('gulp-autoprefixer'),
-    htmlmin     = require('gulp-htmlmin'),
-    ignore      = require('gulp-ignore'),
-    imagemin 	= require('gulp-imagemin'),
-    jade        = require('gulp-jade');
+var gulp          = require('gulp'),
+    browserSync   = require('browser-sync'),
+    sass          = require('gulp-sass'),
+    cssnano       = require('gulp-cssnano'),
+    del           = require('del'),
+    autoprefixer  = require('gulp-autoprefixer'),
+    htmlmin       = require('gulp-htmlmin'),
+    ignore        = require('gulp-ignore'),
+    imagemin      = require('gulp-imagemin'),
+    jade          = require('gulp-jade');
 
 gulp.task('sass', function(){
-	return gulp.src('app/scss/main.scss')
-		.pipe(sass())
-		.pipe(autoprefixer())
-		.pipe(gulp.dest('app/css'))
-		.pipe(browserSync.reload({stream: true}))
+  return gulp.src('app/sass/main.sass')
+  .pipe(sass())
+  .pipe(autoprefixer())
+  .pipe(gulp.dest('app/css'))
+  .pipe(browserSync.reload({stream: true}))
 });
 
 gulp.task('jadeh', function() {
   gulp.src('./app/jade/index.jade')
-    .pipe(jade())
-    .pipe(gulp.dest('./app'))
-    .pipe(browserSync.reload({stream: true}))
+  .pipe(jade())
+  .pipe(gulp.dest('./app'))
+  .pipe(browserSync.reload({stream: true}))
 });
 
 gulp.task('browser-sync', function(){
@@ -32,36 +32,37 @@ gulp.task('browser-sync', function(){
 		notify: false
 	})
 });
+
 gulp.task('watch', ['browser-sync', 'sass'], function(){
-	gulp.watch('app/scss/**/*.scss', ['sass']);
-    gulp.watch('app/jade/**/*.jade', ['jadeh']);
-	gulp.watch('app/*.html', browserSync.reload);
-    gulp.watch('app/*.сss', browserSync.reload);
-	gulp.watch('app/js/**/*.js', browserSync.reload);
+	gulp.watch('app/sass/**/*.sass', ['sass']);
+  gulp.watch('app/jade/**/*.jade', ['jadeh']);
+  gulp.watch('app/*.html', browserSync.reload);
+  gulp.watch('app/*.сss', browserSync.reload);
+  gulp.watch('app/js/**/*.js', browserSync.reload);
 });
 
 gulp.task('clean', function() {
-    return del.sync('dist'); // Delete folder dist before build
+  return del.sync('dist'); // Delete folder dist before build
 });
 
 gulp.task('build', ["clean", "sass"], function() {
 
-    var buildCss = gulp.src('app/css/**/*') // Dest css in production
-    .pipe(cssnano())
-    .pipe(gulp.dest('dist/css'))
+  var buildCss = gulp.src('app/css/**/*') // Dest css in production
+  .pipe(cssnano())
+  .pipe(gulp.dest('dist/css'))
 
-    var buildImage = gulp.src('app/img/**/*') // Dest img in production
-    .pipe(imagemin())
-    .pipe(gulp.dest('dist/img'))
+  var buildImage = gulp.src('app/img/**/*') // Dest img in production
+  .pipe(imagemin())
+  .pipe(gulp.dest('dist/img'))
 
-    var buildJs = gulp.src('app/js/**/*') // Dest js in production
-    .pipe(gulp.dest('dist/js'))
+  var buildJs = gulp.src('app/js/**/*') // Dest js in production
+  .pipe(gulp.dest('dist/js'))
 
-    var buildLibs = gulp.src('app/libs/**/*') // Dest js in production
-    .pipe(gulp.dest('dist/libs'))
+  var buildLibs = gulp.src('app/libs/**/*') // Dest js in production
+  .pipe(gulp.dest('dist/libs'))
 
-    var buildHtml = gulp.src('app/*.html') // Dest HTML in production
-    .pipe(htmlmin({collapseWhitespace: true}))
-    .pipe(gulp.dest('dist'));
+  var buildHtml = gulp.src('app/*.html') // Dest HTML in production
+  .pipe(htmlmin({collapseWhitespace: true}))
+  .pipe(gulp.dest('dist'));
 
 });
