@@ -1,0 +1,56 @@
+.number-info
+  display: flex
+
+  +respond-to(620px)
+    flex-wrap: wrap
+    justify-content: center
+
+.number-info__elem
+  $border: 1px solid #b5eae0
+  width: 20%
+  border-right: $border
+  margin-right: -4px
+  color: #fff
+  padding: 90px 5px
+  text-align: center
+
+  &:first-child
+    border-left: $border
+
+  +respond-to(1120px)
+    padding: 70px 5px
+
+  +respond-to(840px)
+    padding: 40px 5px
+
+  +respond-to(620px)
+    width: 33%
+
+    &:nth-child(4)
+      border-left: $border
+
+  +respond-to(510px)
+    width: 50%
+
+    &:nth-child(4)
+      border-left: none
+
+    &:nth-child(3),
+    &:nth-child(5)
+      border-left: $border
+
+.number-info__elem-number
+  font: 700 72px/72px $Montserrat
+  display: block
+
+  +respond-to(768px)
+    font-size: 56px
+
+.number-info__elem-descr
+  font: 400 14px/14px $Montserrat
+  display: block
+  text-transform: uppercase
+  text-align: center
+
+  +respond-to(768px)
+    font-size: 12px

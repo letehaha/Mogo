@@ -1,0 +1,150 @@
+@import 'mixins'
+
+.main-nav
+  padding-top: 29px
+  display: flex
+  justify-content: space-between
+  align-items: center
+  position: absolute
+  right: 0
+  left: 0
+
+  +respond-to(1240px)
+    left: 20px
+    right: 20px
+
+  +respond-to(725px)
+    position: fixed
+    background-color: rgba(255, 255, 255, .99)
+    box-shadow: 0 0 10px 3px rgba(0, 0, 0, .2)
+    right: 0
+    left: 0
+    z-index: 5
+    height: $main_nav_height
+    padding: 0 20px
+
+.main-nav__logo-link
+  font: 700 30px/30px $Montserrat
+  color: #fff
+
+  +respond-to(725px)
+    color: $theme_red
+
+.main-nav__burger 
+  display: none
+  width: 30px
+  height: 25px
+  cursor: pointer
+  position: relative
+
+  +respond-to(725px)
+    display: block
+
+.main-nav__burger-item
+  position: absolute
+  background: $theme_red
+  width: 30px
+  height: 2px
+  display: block
+  transition: all .3s ease-in-out
+
+.main-nav__burger-item 
+  top: calc(50% - 1px)
+  right: 0px
+  opacity: 1
+
+  .main-nav__burger--is-open &:nth-child(1)
+    opacity: 0
+
+  &:nth-child(2)
+    top: 2px
+    content: ''
+
+    .main-nav__burger--is-open &
+      transform: rotate(45deg)
+      top: 10px
+
+  &:nth-child(3)
+    top: 22px
+    content: ''
+
+    .main-nav__burger--is-open &
+      transform: rotate(-45deg)
+      top: 10px
+
+.main-nav__list
+  display: flex
+
+  +respond-to(725px)
+    display: flex
+    position: absolute
+    margin: auto
+    flex-direction: column
+    top: $main_nav_height
+    left: 0
+    right: 0
+    box-shadow: 0 10px 14px 5px rgba(0, 0, 0, .2)
+    background-color: rgba(255, 255, 255, .99)
+    opacity: 0
+    visibility: hidden
+    transition: .35s ease-out
+    border-bottom-right-radius: 6px
+    border-bottom-left-radius: 6px
+
+    &.main-nav__list--is-open
+      opacity: 1
+      visibility: visible
+
+.main-nav__elem
+  display: inline-flex
+  font: 400 14px/35px $Montserrat
+  margin: 0 20px
+  border-bottom: 3px solid rgba(252, 227, 138, 0)
+  transition: .3s ease-out
+  
+  +respond-from(725px)
+    &:not(.main-nav__elem-icon):hover
+      border-bottom: 3px solid rgba(252, 227, 138, 1)    
+  
+  +respond-to(1060px)
+    margin: 0 15px
+
+  +respond-to(725px)
+    font: 400 14px/35px $Montserrat
+    padding: 10px 20px
+    cursor: pointer
+    text-align: center
+    margin: 0
+    border-bottom: 0
+
+.main-nav__link
+  color: #fff
+  transition: .3s ease-out
+  text-transform: uppercase
+  display: block
+
+  +respond-from(725px)
+    .main-nav__elem:hover &
+      color: #fce38a
+  
+  +respond-to(725px)
+    width: 100%
+    color: #f38181
+
+.main-nav__elem-icon
+  align-items: center
+  
+  +respond-to(725px)
+    display: none
+
+.main-nav__elem-icon-shop,
+.main-nav__elem-icon-glass
+  display: inline-block
+  width: 25px
+  height: 20px
+
+.main-nav__elem-icon-shop
+  background: url('../img/icons/banner_shop.png') no-repeat
+
+.main-nav__elem-icon-glass
+  background: url('../img/icons/banner_glass.png') no-repeat

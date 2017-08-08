@@ -1,0 +1,126 @@
+@import 'mixins'
+
+.page-title
+  background: url('../img/bg/bg-header.jpg') center
+  background-size: cover
+  padding-top: calc(165px + #{$main_nav_height})
+
+  +respond-to(750px)
+    padding-top: calc(100px + #{$main_nav_height})
+
+.page-title__wrapper
+  text-align: center
+
+.page-title__title-style
+  font: 400 72px/72px $Kaushan
+  color: #fff
+
+  +respond-to(992px)
+    font-size: 42px
+    line-height: 42px
+
+  +respond-to(660px)
+    font-size: 32px
+    line-height: 32px
+
+  +respond-to(430px)
+    font-size: 26px
+    line-height: 26px
+    margin-bottom: 15px
+
+.page-title__title
+  font: 700 150px/140px $Montserrat
+  color: #fff
+  position: relative
+  padding-bottom: 65px
+  text-transform: uppercase
+
+  &:after
+    content: ''
+    position: absolute
+    height: 3px
+    width: 4%
+    bottom: 0
+    left: 48%
+    background-color: #fff
+  
+  +respond-to(992px)
+    font-size: 100px
+    line-height: 100px
+
+  +respond-to(660px)
+    font-size: 60px
+    line-height: 70px
+    padding-bottom: 45px
+
+  +respond-to(430px)
+    font-size: 45px
+    line-height: 55px
+    padding-bottom: 25px
+
+.page-title__link-more
+  $margin-top: 50px
+  margin: $margin-top 0 100px
+  display: inline-block
+  color: #fff
+  font: 700 14px/1 $Montserrat
+  border: 3px solid #fff
+  padding: 12px 30px
+  text-transform: uppercase
+  transition: .25s ease-out
+  position: relative
+  +font-smoothing
+
+  &:after
+    position: absolute
+    content: ''
+    width: 25px
+    height: 25px
+    transform: rotate(45deg)
+    bottom: -15px
+    left: 50%
+    border-bottom: 3px solid #fff
+    border-right: 3px solid #fff
+    opacity: 0
+    transition: .35s ease-out
+    transform-origin: top left
+    transform: rotateZ(45deg)
+    will-change: transform
+  
+  +respond-from(551px)
+    &:hover
+      background-color: #fff
+      color: $theme_red
+      letter-spacing: 1px
+
+      &:after
+        opacity: 1
+        bottom: -20px
+        transform: rotateZ(45deg)
+        animation-name: arrow-down
+        animation-delay: .35s
+        animation-timing-function: ease-out
+        animation-duration: 1s
+        animation-iteration-count: infinite
+
+  +respond-to(550px)
+    border-color: transparent
+    font-size: 16px
+
+    &:after
+      opacity: 1
+      bottom: -10px
+      transform: rotateZ(45deg)
+      animation-name: arrow-down
+      animation-delay: .35s
+      animation-timing-function: ease-out
+      animation-duration: 1s
+      animation-iteration-count: infinite
+
+@keyframes arrow-down
+  0%
+    transform: rotateZ(45deg)
+  50%
+    transform: rotateZ(45deg) translateX(5px) translateY(5px)
+  100%
+    transform: rotateZ(45deg)

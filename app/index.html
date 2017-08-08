@@ -52,19 +52,19 @@
       <nav role="navigation" class="main-nav">
         
         <div class="main-nav__logo">
-          <a class="main-nav__logo-link" href="index.html">MoGo</a>
+          <a class="main-nav__logo-link" href="/">MoGo</a>
         </div>
 
         <ul class="main-nav__list">
-          <li class="main-nav__elem"><a class="main-nav__link" href="#about">About</a></li>
-          <li class="main-nav__elem"><a class="main-nav__link" href="#service">Service</a></li>
-          <li class="main-nav__elem"><a class="main-nav__link" href="#works">Work</a></li>
-          <li class="main-nav__elem"><a class="main-nav__link" href="#blog">Blog</a></li>
-          <li class="main-nav__elem"><a class="main-nav__link" href="#footer">Contact</a></li>
+          <li class="main-nav__elem"><a class="main-nav__link scroll-to-href" href="#href-about-us">About</a></li>
+          <li class="main-nav__elem"><a class="main-nav__link scroll-to-href" href="#href-service">Service</a></li>
+          <li class="main-nav__elem"><a class="main-nav__link scroll-to-href" href="#href-works">Work</a></li>
+          <li class="main-nav__elem"><a class="main-nav__link scroll-to-href" href="#href-blog">Blog</a></li>
+          <li class="main-nav__elem"><a class="main-nav__link scroll-to-href" href="#footer">Contact</a></li>
           <li class="main-nav__elem main-nav__elem-icon"><a class="main-nav__elem-icon-shop" href="#"></a></li>
           <li class="main-nav__elem main-nav__elem-icon"><a class="main-nav__elem-icon-glass" href="#"></a></li>
         </ul> 
-      
+
         <div class="main-nav__burger">
           <span class="main-nav__burger-item"></span>
           <span class="main-nav__burger-item"></span>
@@ -72,47 +72,59 @@
         </div>
       
       </nav>
-      
-      <div class="header-intro">
-        <h2>Creative Template</h2>
-        <h1>Welcome<br>to MoGo</h1>
-        <a href="#about">Learn more</a>
-      </div>
-
     </div>
   </header>
 
-  <section id="about" class="about">
+  <section class="page-title">
     <div class="container">
-      <div class="sect-title">
-        <h3>What we do</h3>
-        <h2>Story about us</h2>
+      <div class="page-title__wrapper">
+        <h2 class="page-title__title-style">Creative Template</h2>
+        <h1 class="page-title__title">Welcome<br>to MoGo</h1>
+        <a class="page-title__link-more scroll-to-href" href="#href-about-us">Learn more</a>
       </div>
-      <div class="sect-descr">
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+    </div>
+  </section>
+
+  <section id="href-about-us" class="section section--about-us">
+    <div class="container">
+      <div class="section-title">
+        <h3 class="section-title__descr">What we do</h3>
+        <h2 class="section-title__intro">Story about us</h2>
       </div>
-      <div class="about-content">
-        <div class="about-content_elem">
-          <div class="about-content_elem-mask about-content_elem-mask-one">
-            <div class="about_sect-content_elem-content">
+      <div class="section-descr">
+        <p class="section-descr__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+      </div>
+      <div class="about-us">
+        <div class="about-us__elem">
+          <div class="about-us__elem-mask">
+            <div class="about-us__image">
+              <img src="../img/photo/pic-1.jpg" alt="Super team">
+            </div>
+            <div class="about-us__info">
               <img src="img/icons/about-users.png">
-              <h5>Super team</h5>
+              <h4 class="about-us__info-title">Super team</h4>
             </div>
           </div>
         </div>
-        <div class="about-content_elem">
-          <div class="about-content_elem-mask about-content_elem-mask-two">
-            <div class="about_sect-content_elem-content">
+        <div class="about-us__elem">
+          <div class="about-us__elem-mask">
+            <div class="about-us__image">
+              <img src="../img/photo/pic-2.jpg" alt="Super team">
+            </div>
+            <div class="about-us__info">
               <img src="img/icons/about-users.png">
-              <h5>Super team</h5>
+              <h4 class="about-us__info-title">Super team</h4>
             </div>
           </div>
         </div>
-        <div class="about-content_elem">
-          <div class="about-content_elem-mask about-content_elem-mask-three">
-            <div class="about_sect-content_elem-content">
+        <div class="about-us__elem">
+          <div class="about-us__elem-mask">
+            <div class="about-us__image">
+              <img src="../img/photo/pic-3.jpg" alt="Super team">
+            </div>
+            <div class="about-us__info">
               <img src="img/icons/about-users.png">
-              <h5>Super team</h5>
+              <h4 class="about-us__info-title">Super team</h4>
             </div>
           </div>
         </div>
@@ -120,107 +132,107 @@
     </div>
   </section>
 
-  <section id="info" class="info">
+  <section id="href-number-info" class="section section--number-info">
     <div class="container">
-      <div class="info-content">
-        <div class="info-content_elem">
-          <span>42</span>
-          <span>Web Design Projects</span>
+      <div class="number-info">
+        <div class="number-info__elem">
+          <span class="number-info__elem-number">42</span>
+          <span class="number-info__elem-descr">Web Design Projects</span>
         </div>
-        <div class="info-content_elem">
-          <span>123</span>
-          <span>happy client</span>
+        <div class="number-info__elem">
+          <span class="number-info__elem-number">123</span>
+          <span class="number-info__elem-descr">happy client</span>
         </div>
-        <div class="info-content_elem">
-          <span>15</span>
-          <span>award winner</span>
+        <div class="number-info__elem">
+          <span class="number-info__elem-number">15</span>
+          <span class="number-info__elem-descr">award winner</span>
         </div>
-        <div class="info-content_elem">
-          <span>99</span>
-          <span>cup of coffee</span>
+        <div class="number-info__elem">
+          <span class="number-info__elem-number">99</span>
+          <span class="number-info__elem-descr">cup of coffee</span>
         </div>
-        <div class="info-content_elem">
-          <span>24</span>
-          <span>members</span>
+        <div class="number-info__elem">
+          <span class="number-info__elem-number">24</span>
+          <span class="number-info__elem-descr">members</span>
         </div>
       </div>
     </div>
   </section>
 
-  <section id="service" class="service">
+  <section id="href-service" class="section section--service">
     <div class="container">
-      <div class="sect-title">
-        <h3>We work with</h3>
-        <h2>Amazing Services</h2>
+      <div class="section-title">
+        <h3 class="section-title__descr">We work with</h3>
+        <h2 class="section-title__intro">Amazing Services</h2>
       </div>
-      <div class="service__sect-content">
-        <div class="service__sect-content-1">
-          <div class="service__sect-content_item">
-            <div class="service__sect-content_item_img">
+      <div class="service">
+        <ul class="service__list service__list--border-bottom">
+          <li class="service__item">
+            <div class="service__item-img">
               <img src="img/icons/service-1.png">
             </div>
-            <div class="service__sect-content_item_text">
-              <h3>Photography</h3>
-              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.</p>
+            <div class="service__item-text">
+              <h3 class="service__item-title">Photography</h3>
+              <p class="service__item-descr">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.</p>
             </div>
-          </div>
-          <div class="service__sect-content_item">
-            <div class="service__sect-content_item_img">
+          </li>
+          <li class="service__item">
+            <div class="service__item-img">
               <img src="img/icons/service-2.png">
             </div>
-            <div class="service__sect-content_item_text">
-              <h3>Web Design</h3>
-              <p>Ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.</p>
+            <div class="service__item-text">
+              <h3 class="service__item-title">Web Design</h3>
+              <p class="service__item-descr">Ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.</p>
             </div>
-          </div>
-          <div class="service__sect-content_item">
-            <div class="service__sect-content_item_img">
+          </li>
+          <li class="service__item">
+            <div class="service__item-img">
               <img src="img/icons/service-3.png">
             </div>
-            <div class="service__sect-content_item_text">
-              <h3>Creativity</h3>
-              <p>Dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.</p>
+            <div class="service__item-text">
+              <h3 class="service__item-title">Creativity</h3>
+              <p class="service__item-descr">Dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.</p>
             </div>
-          </div>
-        </div>
-        <div class="service__sect-content-2">
-          <div class="service__sect-content_item">
-            <div class="service__sect-content_item_img">
+          </li>
+        </ul>
+        <ul class="service__list">
+          <li class="service__item">
+            <div class="service__item-img">
               <img src="img/icons/service-4.png">
             </div>
-            <div class="service__sect-content_item_text">
-              <h3>seo</h3>
-              <p>Ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod.</p>
+            <div class="service__item-text">
+              <h3 class="service__item-title">seo</h3>
+              <p class="service__item-descr">Ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod.</p>
             </div>
-          </div>
-          <div class="service__sect-content_item">
-            <div class="service__sect-content_item_img">
+          </li>
+          <li class="service__item">
+            <div class="service__item-img">
               <img src="img/icons/service-5.png">
             </div>
-            <div class="service__sect-content_item_text">
-              <h3>Css/Html</h3>
-              <p>Lorem dolor sit amet, consectetur adipiscing elit, sed do tempor.</p>
+            <div class="service__item-text">
+              <h3 class="service__item-title">Css/Html</h3>
+              <p class="service__item-descr">Lorem dolor sit amet, consectetur adipiscing elit, sed do tempor.</p>
             </div>
-          </div>
-          <div class="service__sect-content_item">
-            <div class="service__sect-content_item_img">
+          </li>
+          <li class="service__item">
+            <div class="service__item-img">
               <img src="img/icons/service-6.png">
             </div>
-            <div class="service__sect-content_item_text">
-              <h3>digital</h3>
-              <p>Sit amet, consectetur adipiscing elit, sed do eiusmod tempor.</p>
+            <div class="service__item-text">
+              <h3 class="service__item-title">digital</h3>
+              <p class="service__item-descr">Sit amet, consectetur adipiscing elit, sed do eiusmod tempor.</p>
             </div>
-          </div>
-        </div>
+          </li>
+        </ul>
       </div>
     </div>
   </section>
 
-  <section id="devices" class="devices">
+  <section id="href-devices" class="section section--devices">
     <div class="container">
-      <div class="sect-title">
-        <h3>For all devices</h3>
-        <h2>Unique design</h2>
+      <div class="section-title">
+        <h3 class="section-title__descr">For all devices</h3>
+        <h2 class="section-title__intro">Unique design</h2>
       </div>
       <div class="devices__sect-content">
         <img src="img/bg/bg-features-display.png">
@@ -231,14 +243,14 @@
     </div>
   </section>
 
-  <section id="services" class="services">
+  <section id="href-services" class="section section--services">
     <div class="container">
-      <div class="sect-title">
-        <h3>Service</h3>
-        <h2>what we do</h2>
+      <div class="section-title">
+        <h3 class="section-title__descr">Service</h3>
+        <h2 class="section-title__intro">what we do</h2>
       </div>
-      <div class="sect-descr">
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+      <div class="section-descr">
+        <p class="section-descr__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
       </div>
       <div class="services__sect-content">
         <div class="services__sect-content_img">
@@ -263,7 +275,7 @@
     </div>
   </section>
 
-  <section id="first_slide" class="first_slide">
+  <section id="href-first_slide" class="section section--first_slide">
     <div class="container">
       <div class="first_slide_wrapper">
         <div class="first_slide_wrapper_img">
@@ -277,14 +289,14 @@
     </div>
   </section>
 
-  <section id="team" class="team">
+  <section id="href-team" class="section section--team">
     <div class="container">
-      <div class="sect-title">
-        <h3>Who we are</h3>
-        <h2>Meet our team</h2>
+      <div class="section-title">
+        <h3 class="section-title__descr">Who we are</h3>
+        <h2 class="section-title__intro">Meet our team</h2>
       </div>
-      <div class="sect-descr">
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+      <div class="section-descr">
+        <p class="section-descr__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
       </div>
       <div class="team__sect-content">
         <div class="team__sect-content__elem">
@@ -333,7 +345,7 @@
     </div>
   </section>
 
-  <section id="logos" class="logos">
+  <section id="href-logos" class="section section--logos">
     <div class="container">
       <div class="logos-content">
         <img src="img/bg/bg-logos.png">
@@ -341,14 +353,14 @@
     </div>
   </section>
 
-  <section id="works" class="works">
+  <section id="href-works" class="section section--works">
     <div class="container">
-      <div class="sect-title">
-        <h3>What we do</h3>
-        <h2>some of our work</h2>
+      <div class="section-title">
+        <h3 class="section-title__descr">What we do</h3>
+        <h2 class="section-title__intro">some of our work</h2>
       </div>
-      <div class="sect-descr">
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+      <div class="section-descr">
+        <p class="section-descr__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
       </div>
     </div>
     <div class="works__wrapper">
@@ -407,7 +419,7 @@
     </div>
   </section>
 
-    <section id="second_slide" class="second_slide">
+  <section id="href-second_slide" class="section section--second_slide">
     <div class="container">
       <div class="second_slide_wrapper">
         <div class="second_slide_wrapper_img">
@@ -421,11 +433,11 @@
     </div>
   </section>
 
-  <section id="clients" class="clietns">
+  <section id="href-clients" class="section section--clietns">
     <div class="container">
-      <div class="sect-title">
-        <h3>Happy Clients</h3>
-        <h2>What people say</h2>
+      <div class="section-title">
+        <h3 class="section-title__descr">Happy Clients</h3>
+        <h2 class="section-title__intro">What people say</h2>
       </div>
       <div class="clietns_wrapper">
           <div class="clietns_wrapper_column_item">
@@ -472,11 +484,11 @@
     </div>
   </section>
 
-  <section id="blog" class="blog">
+  <section id="href-blog" class="section section--blog">
     <div class="container">
-      <div class="sect-title">
-        <h3>Our stories</h3>
-        <h2>Latest blog</h2>
+      <div class="section-title">
+        <h3 class="section-title__descr">Our stories</h3>
+        <h2 class="section-title__intro">Latest blog</h2>
       </div>
       <div class="blog_wrapper">
         <div class="blog_wrapper_item">
@@ -543,7 +555,7 @@
     </div>
   </section>
 
-  <section id="map" class="map">
+  <section id="href-map" class="section section--map">
     <div class="map_wrapper">
       <img src="img/icons/map_icon.png">
       <h2>Open map</h2>
