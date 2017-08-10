@@ -1,0 +1,42 @@
+.service__list
+  display: inline-flex
+  justify-content: space-between
+
+.service__list--border-bottom
+  border-bottom: 1px solid #b5eae0
+
+.service__item
+  display: inline-flex
+  justify-content: space-between
+  width: 30%
+  padding: 65px 0 50px
+
+.service__item-img
+  width: 10%
+  min-width: 35px
+
+  +respond-to(750px)
+    margin-right: 5px
+
+  img
+    width: 100%
+    display: block
+
+.service__item-text
+  width: 81%
+
+.service__item-title
+  font: 400 14px/14px $Montserrat
+  text-transform: uppercase
+  color: #333
+  margin-bottom: 20px
+  
+  +respond-to(750px)
+    margin-bottom: 5px
+
+.service__item-descr
+  font: 400 15px/24px $Roboto
+  color: #999
+  
+  +respond-to(750px)
+    font-size: 20px

@@ -3,9 +3,16 @@
 .container
   max-width: 1200px
   margin: 0 auto
+  position: relative
 
   +respond-to(1170px)
-    margin: 0 20px
+    padding: 0 20px
+
+  +respond-to(768px)
+    padding: 0 15px
+
+  +respond-to(550px)
+    padding: 0 10px
 
 $sect_title: #333
 $sect_text: #999
@@ -15,3 +22,5 @@ $theme_red: #f38181
 $Montserrat: 'Montserrat', 'Arial', sans-serif
 $Roboto: 'Roboto', 'Arial', sans-serif
 $Kaushan: 'Kaushan', 'Arial', sans-serif
+
+$main_nav_height: 65px

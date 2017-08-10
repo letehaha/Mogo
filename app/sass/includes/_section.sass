@@ -1,0 +1,59 @@
+@import 'mixins'
+
+.section-title
+  text-align: center
+
+.section-title__descr
+  font: 400 24px/24px $Kaushan
+  color: #000
+  margin-bottom: 30px
+
+  +respond-to(750px)
+    margin: 25px 20px 40px
+
+.section-title__intro
+  font: 700 30px/30px $Montserrat
+  color: #000
+  text-transform: uppercase
+  position: relative
+  padding-bottom: 31px
+
+  &:after
+    content: ''
+    position: absolute
+    height: 3px
+    bottom: 0
+    width: 6%
+    left: 50%
+    transform: translateX(-50%)
+    background-color: #f38181
+
+    .section--service &
+      width: 7%
+
+.section-descr
+  text-align: center
+  margin: 45px 120px 100px
+
+  +respond-to(768px)
+    max-width: 450px
+    margin: 30px auto 60px
+
+.section-descr__text
+  font: 400 15px/24px $Roboto
+  color: #999
+
+.section--about-us
+  padding: 90px 0 110px
+
+  +respond-to(768px)
+    padding: 60px 0 90px
+
+  +respond-to(450px)
+    padding: 40px 0 60px
+
+.section--number-info
+  background-color: $fon_color
+
+.section--service
+  padding: 110px 0 70px

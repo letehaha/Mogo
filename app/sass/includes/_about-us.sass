@@ -1,0 +1,91 @@
+.about-us
+  display: flex
+  justify-content: space-between
+
+  +respond-to(950px)
+    flex-direction: column
+
+.about-us__elem
+  width: 30%
+  background-color: $fon_color
+  cursor: pointer
+  height: 100%
+  display: block
+
+  +respond-to(950px)
+    width: 60%
+    margin: 0 auto 30px
+
+    &:last-child
+      margin-bottom: 0
+
+  +respond-to(550px)
+    width: 90%
+
+.about-us__elem-mask
+  background-size: cover
+  width: 100%
+  height: 237px
+  transition: .3s ease-out
+  position: relative
+
+  +respond-to(950px)
+    height: 35vw
+
+  +respond-to(550px)
+    height: auto
+
+.about-us_elem-mask:hover .about_sect-content_elem-content
+  opacity: 1
+
+$transition-timing: .35s ease-out
+
+.about-us__info
+  position: absolute
+  left: 0
+  top: 0
+  width: 100%
+  height: 100%
+  display: flex
+  flex-direction: column
+  align-items: center
+  justify-content: center
+  color: #fff
+  opacity: 0
+  transition: $transition-timing
+  background: linear-gradient(to bottom, rgba(243, 129, 129, .8), rgba(252, 227, 138, .8))
+
+  .about-us__elem:hover &
+    opacity: 1
+    transform: translateX(-10px) translateY(-10px)
+
+.about-us__info-title
+  font: 700 18px/18px $Montserrat
+  margin-top: 20px
+
+.about-us__image
+  width: 100%
+  height: 100%
+  overflow: hidden
+  position: relative
+  transition: $transition-timing
+
+  img
+    min-width: 100%
+    min-height: 100%
+    max-width: 200%
+    position: absolute
+    top: 50%
+    left: 50%
+    transform: translateX(-50%) translateY(-50%)
+    display: block
+
+    +respond-to(550px)
+      position: static
+      transform: none
+      top: inherit
+      left: inherit
+      width: 100%
+
+  .about-us__elem:hover &
+    transform: translateX(-10px) translateY(-10px)

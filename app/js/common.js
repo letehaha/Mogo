@@ -31,12 +31,17 @@ $(function() {
     });
   });
 
-  $('.main-nav__link').click(function(e) {
-    var link = $(this).attr('href');
+  $('.scroll-to-href').click(function(e) {
+    var link    = $(this).attr('href'),
+        height  = $('.main-nav').height();
     
     e.preventDefault();
 
-    $('html,body').stop().animate({ scrollTop: $(link).offset().top - 60 }, 500);
+    if (window.innerWidth < 725){
+      $('html,body').stop().animate({ scrollTop: $(link).offset().top - height }, 500);
+    } else{
+      $('html,body').stop().animate({ scrollTop: $(link).offset().top}, 500);
+    }
     
     $mainBurger.removeClass('main-nav__burger--is-open');
     $menuList.removeClass('main-nav__list--is-open');
