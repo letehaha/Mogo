@@ -1,0 +1,91 @@
+.clietns
+  padding: 110px 0 130px
+  background: url('../img/bg/bg-people.jpg') center
+  background-size: cover
+
+.clietns__list
+  margin-top: 85px
+  display: flex
+  justify-content: space-between
+  flex-wrap: wrap
+
+  +respond-to(768px)
+    margin-top: 50px
+
+.clietns__item
+  display: flex
+  justify-content: space-between
+  width: 50%
+  padding: 0 10px
+
+  &:nth-child(n + 3)
+    margin-top: 70px
+
+  +respond-to(768px)
+    flex-direction: column
+    padding: 0 5px
+
+    &:nth-child(n + 3)
+      margin-top: 30px
+
+  +respond-to(580px)
+    width: 100%
+    max-width: 350px
+    margin: 0 auto
+
+    &:nth-child(n + 2)
+      margin: 40px auto 0
+
+.clietns__item-photo
+  width: 23%
+
+  +respond-to(768px)
+    display: block
+    margin: 0 auto 15px
+  
+  img
+    display: block
+    width: 100%
+    cursor: pointer 
+
+.clietns__item-info
+  width: 73%
+
+  +respond-to(768px)
+    width: 100%
+  
+  h3
+    font: 400 14px/14px $Montserrat
+    text-transform: uppercase
+    color: #333
+    margin-bottom: 15px
+
+    +respond-to(768px)
+      text-align: center
+
+  span
+    font: italic 300 15px/15px $Roboto
+    color: #333
+    padding-bottom: 20px
+    margin-bottom: 20px
+    position: relative
+    display: block
+
+    +respond-to(768px)
+      text-align: center        
+    
+    &:after
+      content: ''
+      position: absolute
+      height: 3px
+      background-color: #f38181
+      width: 15%
+      bottom: 0
+      left: 0
+
+      +respond-to(768px)
+        left: calc(50% - (15%/2))
+
+  p
+    font: 400 15px/24px $Roboto
+    color: #999

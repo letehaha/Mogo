@@ -1,0 +1,270 @@
+.footer
+  background-color: #f8f8f8
+
+.footer__wrapper
+  padding: 75px 0 70px
+  border-bottom: 1px solid #e5e5e5
+  display: flex
+  justify-content: space-between
+
+  +respond-to(768px)
+    padding: 50px 0
+    flex-direction: column
+
+  +respond-to(550px)
+    padding-bottom: 20px
+
+.footer__socials
+  width: 39%
+
+  +respond-to(768px)
+    width: 100%
+
+.footer__socials-info
+  border-bottom: 1px solid #e5e5e5
+  
+.footer__socials-title
+  font: 700 46px/46px $Montserrat
+  color: #ccc
+  margin-bottom: 45px
+  display: block
+
+  +respond-to(1024px)
+    margin-bottom: 25px
+
+.footer__socials-descr
+  font: 400 15px/25px $Roboto
+  color: #999
+  margin-bottom: 50px
+
+  +respond-to(1024px)
+    margin-bottom: 25px
+
+.footer__socials-followers
+  font: 400 14px $Montserrat
+  color: #333
+  margin-bottom: 20px
+  
+.footer__socials-followers-count
+  font: 700 18px $Montserrat
+
+.footer__socials-links
+  margin: 20px 0 40px
+  
+.footer__socials-links-title
+  font: italic 300 15px $Roboto
+  color: #999
+  display: inline-block
+  margin-right: 20px
+
+  +respond-to(450px)
+    display: block
+    margin-bottom: 10px
+
+.footer__socials-links-list
+  display: inline-block
+  
+.footer__socials-links-item
+  display: inline-block
+  margin-right: 15px
+  
+  &:last-child
+    margin-right: 0
+    
+.footer__socials-links-link
+  font-size: 1em
+  color: $fon_color
+
+.footer__socials-subscribe-form
+  +respond-to(550px)
+    display: flex
+
+.footer__socials-subscribe-field
+  width: 50%
+  box-sizing: border-box
+  padding: 10px
+  border: 1px solid #e7e7e7
+  line-height: 20px
+  font-family: $Roboto
+  +font-smoothing
+
+  &::-webkit-input-placeholder // WebKit, Blink, Edge
+    font: italic 300 15px $Roboto
+    color: #ccc
+
+  &:-moz-placeholder // Mozilla Firefox 4 to 18 
+    font: italic 300 15px $Roboto
+    color: #ccc
+    opacity: 1
+
+  &::-moz-placeholder // Mozilla Firefox 19+
+    font: italic 300 15px $Roboto
+    color: #ccc
+    opacity: 1
+
+  &:-ms-input-placeholder // Internet Explorer 10-11
+    font: italic 300 15px $Roboto
+    color: #ccc
+
+  +respond-to(550px)
+    width: 100%
+    max-width: 250px
+
+.footer__socials-subscribe-submit
+  width: 40%
+  padding: 10px
+  border: 2px solid $fon_color
+  background-color: $fon_color
+  margin-left: -4px
+  line-height: 20px
+  font: 700 14px $Montserrat
+  color: #fff
+  cursor: pointer
+  transition: .15s ease-out
+  +font-smoothing
+
+  &:hover
+    box-shadow: 0 0 10px 1px rgba(121, 224, 196, .6)
+
+  &:active
+    border-color: rgb(121, 224, 196)
+    background-color: rgb(121, 224, 196)
+
+  +respond-to(550px)
+    width: 170px
+    flex: none
+
+  +respond-to(420px)
+    width: 110px
+
+.footer__blog
+  width: 30%
+
+  +respond-to(768px)
+    width: 100%
+  
+.footer__title
+  font: 400 14px $Montserrat
+  color: #333
+  text-transform: uppercase
+  margin: 10px 0 40px
+
+  +respond-to(768px)
+    margin: 20px 0
+
+.footer__blog-item
+  display: flex
+  justify-content: space-between
+  cursor: pointer
+
+  &:not(:last-child)
+    margin-bottom: 30px
+
+  +respond-to(768px)
+    display: flex
+
+    &:not(:last-child)
+      margin-bottom: 0
+
+    &:not(:first-child)
+      margin-top: 40px
+
+  +respond-to(430px)
+    &:not(:last-child)
+      margin-bottom: 20px
+
+.footer__blog-item-preview
+  display: inline-block
+  width: 38%
+
+  +respond-to(430px)
+    width: 150px
+    flex: none
+    margin-right: 20px
+
+  +respond-to(350px)
+    width: 120px
+    margin-right: 10px
+  
+  img
+    display: block
+    width: 100%
+
+.footer__blog-item-info
+  display: inline-flex
+  flex-direction: column
+  justify-content: center
+  width: 57%
+
+  +respond-to(430px)
+  
+.footer__blog-item-title
+  font: 400 12px/18px $Montserrat
+  color: #333
+  text-transform: uppercase
+  
+.footer__blog-item-date
+  display: block
+  font: italic 300 13px $Roboto
+  color: #999
+
+  +respond-to(430px)
+
+
+.footer__instagram
+  width: 25%
+
+  +respond-to(768px)
+    width: 100%
+
+.footer__instagram-link-more
+  margin-top: 10px
+  display: inline-block
+  font: italic 300 13px $Roboto
+  color: #999
+  cursor: pointer
+  border-bottom: 1px solid transparent
+  transition: .15s ease-out
+
+  &:hover
+    border-color: #999
+
+.footer__instagram-list
+  display: flex
+  flex-wrap: wrap
+  justify-content: space-between
+
+  +respond-to(768px)
+    justify-content: flex-start
+    margin-bottom: -5px
+
+.footer__instagram-item
+  width: 32.5%
+  display: block
+  cursor: pointer
+  margin-bottom: 4px
+
+  +respond-to(768px)
+    width: 70px
+    height: 70px
+    margin-bottom: 5px
+
+    &:not(:last-child)
+      margin-right: 5px
+  
+  img
+    width: 100%
+    display: block
+
+.footer__rights
+  padding: 25px 0
+  text-align: center
+  
+.footer__rights-title
+  font: 400 14px $Montserrat
+  color: #333
+  +font-smoothing
+    
+.footer__rights-title--style
+  color: #f38181
+  cursor: pointer

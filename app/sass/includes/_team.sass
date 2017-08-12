@@ -48,7 +48,7 @@
     height: 375px
 
   &:hover
-    margin: -10px 0 0 -10px
+    transform: translate3d(-10px, -10px, 0)
 
 .team__item-soc
   display: inline-block
@@ -64,6 +64,7 @@
   height: 56px
   transition: .2s ease-out
   opacity: 0
+  visibility: hidden
   font-size: 1.5em
 
   &:hover
@@ -72,3 +73,4 @@
 
   .team__item-person:hover &
     opacity: 1
+    visibility: visible

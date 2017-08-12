@@ -40,4 +40,22 @@ $(function() {
 
   });
 
+  $('#footer-subscribe-form').submit(function(e) {
+    e.preventDefault();
+
+    var $input = $(this).find('input');
+
+    if ($input.val() !== ''){
+      $input.removeClass('js-validate');
+      submitSubscribe();
+    } else{
+      $input.addClass('js-validate');
+    }
+
+  });
+
 });
+
+function submitSubscribe(){
+  // code ...
+}
