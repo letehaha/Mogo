@@ -1,0 +1,79 @@
+.services__wrapper
+  display: flex
+  justify-content: space-between
+
+  +respond-to(700px)
+    flex-direction: column
+    align-items: center
+
+.services__preview
+  width: 48%
+
+  +respond-to(700px)
+    width: 60vw
+    margin-bottom: 25px
+
+  +respond-to(660px)
+    width: 75vw
+
+  +respond-to(580px)
+    width: 100%
+  
+  img
+    width: 100%
+    display: block
+
+.services__accordeon
+  width: 48%
+
+  +respond-to(700px)
+    width: 75vw
+
+  +respond-to(580px)
+    width: 100%
+
+.services__accordeon-item
+  border: 1px solid #e5e5e5
+  margin-bottom: 10px
+  cursor: pointer
+
+  &:last-child
+    margin-bottom: 0
+  
+.services__accordeon-title
+  text-transform: uppercase
+  color: #333
+  font: 400 14px/14px $Montserrat
+  padding: 25px
+  border-bottom: 1px solid #e5e5e5
+  position: relative
+
+  +respond-to(580px)
+    padding: 15px
+
+.services__accordeon-arrow
+  position: absolute
+  right: 30px
+  top: 50%
+  width: 15px
+  height: 15px
+  border-bottom: 2px solid #ccc
+  border-left: 2px solid #ccc
+  transform: translateY(-50%) rotate(-45deg)
+  transition: .35s ease-out
+
+  .services__accordeon-item--open &
+    transform: translateY(-50%) rotate(-225deg)
+
+.services__accordeon-descr
+  transition: .35s ease-out
+  padding: 0 10px
+  font: italic 300 15px/24px $Roboto
+  color: #999
+  max-height: 0
+  overflow: hidden
+
+  .services__accordeon-item--open &
+    padding: 10px
+    max-height: 200px
+    overflow-y: auto
