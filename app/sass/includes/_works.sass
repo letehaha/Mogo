@@ -1,0 +1,93 @@
+$works-item-height: 390px
+$works-item-height-medium: 290px
+
+.works
+  padding: 110px 0 120px
+
+.works__list
+  background-color: $fon_color
+  display: inline-flex
+  flex-direction: column
+  flex-wrap: wrap
+  width: 100%
+  height: calc(#{$works-item-height} * 2)
+  
+  +respond-to(1024px)
+    height: calc(#{$works-item-height-medium} * 3)
+
+  +respond-to(768px)
+    height: calc(50vw * 4)
+
+.works__item
+  height: $works-item-height
+  width: 25%
+  background-position: center
+  background-size: cover
+  cursor: pointer
+
+  +respond-to(1024px)
+    height: $works-item-height-medium
+    width: 33.3333%
+
+  +respond-to(768px)
+    width: 50vw
+    height: 50vw
+  
+  &.works__item--full-height
+    height: calc(#{$works-item-height} * 2)
+
+    +respond-to(1024px)
+      height: calc(#{$works-item-height-medium} * 2)
+
+    +respond-to(768px)
+      height: calc(50vw * 2)
+
+.works__item-info
+  width: 100%
+  height: $works-item-height
+  display: inline-flex
+  justify-content: center
+  align-items: center
+  flex-direction: column
+  color: #fff
+  opacity: 0
+  transition: .3s ease-out
+  background: linear-gradient(to bottom, rgba(243, 129, 129, .8), rgba(252, 227, 138, .8))
+  
+  +respond-to(1024px)
+    height: $works-item-height-medium
+  
+  +respond-to(768px)
+    width: 50vw
+    height: 50vw
+  
+  .works__item:hover &
+    opacity: 1
+
+  .works__item--full-height &
+    height: calc(#{$works-item-height} * 2)
+
+    +respond-to(1024px)
+      height: calc(#{$works-item-height-medium} * 2)
+
+    +respond-to(768px)
+      height: calc(50vw * 2)
+
+.works__item-info-icon
+  margin-bottom: 20px
+  display: block
+
+.works__item-info-descr
+  font: italic 300 15px/1 $Roboto
+
+  +respond-to(768px)
+    font-size: 11px
+
+.works__item-info-title
+  font: 400 14px/1 $Montserrat
+  text-transform: uppercase
+  margin-bottom: 20px
+
+  +respond-to(768px)
+    font-size: 10px
+    margin-bottom: 10px

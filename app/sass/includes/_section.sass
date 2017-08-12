@@ -32,6 +32,9 @@
     .section--devices &
       width: 5%
 
+    .section--blog &
+      width: 5%
+
 .section-descr
   text-align: center
   margin: 45px 120px 100px
@@ -59,17 +62,23 @@
 .section--service
   padding: 110px 0 70px
 
+  +respond-to(768px)
+    padding: 50px 0
+
 .section--devices
   padding-top: 110px
   background: url('../img/bg/bg-features.jpg') center
   background-size: cover
   position: relative
   
-  +respond-to(750px)
+  +respond-to(768px)
     padding-top: 50px
 
 .section--services
   padding: 110px 0 120px
+
+  +respond-to(768px)
+    padding: 50px 0
 
 .section--testimotials
   padding: 70px 0
@@ -78,5 +87,31 @@
 .section--team
   padding: 100px 0 120px
 
-  +respond-to(750px)
+  +respond-to(768px)
     padding: 50px 0
+
+.section--works
+  padding-top: 110px
+  
+  +respond-to(768px)
+    padding-top: 50px
+
+.section--clients
+  padding: 110px 0 130px
+  background: url('../img/bg/bg-people.jpg') center
+  background-size: cover
+  
+  +respond-to(768px)
+    padding: 50px 0
+
+.section--blog
+  padding: 110px 0 115px
+  
+  +respond-to(768px)
+    padding: 50px 0
+
+.section--map
+  background: url('../img/bg/bg-map.jpg') center
+  background-size: cover
+  padding: 60px 0
+  text-align: center

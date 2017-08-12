@@ -1,15 +1,39 @@
 .service__list
   display: inline-flex
   justify-content: space-between
+  flex-wrap: wrap
+  position: relative
+  
+  &:after
+    content: ''
+    position: absolute
+    top: 50%
+    left: 0
+    right: 0
+    height: 1px
+    width: 100%
+    background-color: #b5eae0
 
-.service__list--border-bottom
-  border-bottom: 1px solid #b5eae0
+    +respond-to(768px)
+      display: none
 
 .service__item
   display: inline-flex
   justify-content: space-between
   width: 30%
   padding: 65px 0 50px
+
+  +respond-to(900px)
+    width: 32%
+
+  +respond-to(768px)
+    width: 50%
+    padding: 25px 5px
+
+  +respond-to(550px)
+    width: 100%
+    max-width: 450px
+    margin: auto
 
 .service__item-img
   width: 10%
@@ -18,12 +42,20 @@
   +respond-to(750px)
     margin-right: 5px
 
+  +respond-to(550px)
+    width: 35px
+    margin-right: 15px
+    flex: none
+
   img
     width: 100%
     display: block
 
 .service__item-text
   width: 81%
+
+  +respond-to(550px)
+    width: 100%
 
 .service__item-title
   font: 400 14px/14px $Montserrat
@@ -35,8 +67,8 @@
     margin-bottom: 5px
 
 .service__item-descr
-  font: 400 15px/24px $Roboto
+  font: 400 15px/1.6 $Roboto
   color: #999
   
   +respond-to(750px)
-    font-size: 20px
+    // font-size: 20px
