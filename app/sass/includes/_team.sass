@@ -1,0 +1,74 @@
+.team__list
+  display: flex
+  justify-content: space-between
+
+  +respond-to(750px)
+    flex-direction: column
+    align-items: center
+
+.team__item
+  width: 30%
+  background-color: $fon_color
+  
+  +respond-to(1024px)
+    width: 32%
+
+  +respond-to(750px)
+    width: 50vw
+
+    &:not(:last-child)
+      margin-bottom: 25px
+
+  +respond-to(660px)
+    width: 60vw
+
+  +respond-to(480px)
+    width: 75vw
+
+  +respond-to(430px)
+    width: 100%
+
+.team__item-person
+  background-size: cover
+  width: 100%
+  height: 475px
+  transition: .3s ease-out
+  position: relative
+  display: flex
+  align-items: center
+  justify-content: center
+  background-position: center
+  background-repeat: no-repeat
+  background-size: cover
+  
+  +respond-to(1024px)
+    height: 400px
+  
+  +respond-to(750px)
+    height: 375px
+
+  &:hover
+    margin: -10px 0 0 -10px
+
+.team__item-soc
+  display: inline-block
+  margin-right: -4px
+  
+.team__item-soc-link
+  display: inline-flex
+  align-items: center
+  justify-content: center
+  background-color: #fce38a
+  color: #f38181
+  width: 56px
+  height: 56px
+  transition: .2s ease-out
+  opacity: 0
+  font-size: 1.5em
+
+  &:hover
+    background-color: #f38181
+    color: #fce38a
+
+  .team__item-person:hover &
+    opacity: 1

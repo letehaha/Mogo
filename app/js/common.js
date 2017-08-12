@@ -5,30 +5,22 @@ $(function() {
 
   $('.services__sect-content_accordeon_item:first-child p').addClass('active');
 
-  $('.services__sect-content_accordeon_item h3').click(function(){
-    $('.services__sect-content_accordeon_item p').removeClass('active');
-    $(this).next().addClass('active');
+  $('.services__accordeon-item').click(function(){
+    var $this   = $(this),
+        $items  = $('.services__accordeon-item');
 
-    if ($('.services__sect-content_accordeon_item p').hasClass('active'))
-      $(this).prev().children().css('transform','rotate(180deg)')
+    if ($this.hasClass('services__accordeon-item--open'))
+      return false
 
-  });
+    $items.removeClass('services__accordeon-item--open');
+    $this.addClass('services__accordeon-item--open');
 
-  $('.first_slide_slider').slick({
-    dots: true,
-    speed: 500
   });
 
   $mainBurger.click(function (e) {
-    var $this = $(this);
-
-    $this.toggleClass('main-nav__burger--is-open');
+    $(this).toggleClass('main-nav__burger--is-open');
     $menuList.toggleClass('main-nav__list--is-open');
 
-    $('.burger_elem').click(function(e) {
-      $('.burger-menu').toggleClass('menu-on');
-      $('.burger-list').fadeToggle('burger-list-active');
-    });
   });
 
   $('.scroll-to-href').click(function(e) {
@@ -40,13 +32,12 @@ $(function() {
     if (window.innerWidth < 725){
       $('html,body').stop().animate({ scrollTop: $(link).offset().top - height }, 500);
     } else{
-      $('html,body').stop().animate({ scrollTop: $(link).offset().top}, 500);
+      $('html,body').stop().animate({ scrollTop: $(link).offset().top }, 500);
     }
     
     $mainBurger.removeClass('main-nav__burger--is-open');
     $menuList.removeClass('main-nav__list--is-open');
-  
-  });
 
+  });
 
 });
