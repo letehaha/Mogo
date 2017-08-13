@@ -3,8 +3,6 @@ $(function() {
   var $mainBurger = $('.main-nav__burger'),
       $menuList   = $('.main-nav__list');
 
-  $('.services__sect-content_accordeon_item:first-child p').addClass('active');
-
   $('.services__accordeon-item').click(function(){
     var $this   = $(this),
         $items  = $('.services__accordeon-item');
@@ -55,6 +53,46 @@ $(function() {
   });
 
 });
+
+
+$(function(){
+  var $search_form  = $('#header-search-form'),
+      $search_input = $('.main-nav__elem-search-field'),
+      $search_label = $('.main-nav__elem-search-label');
+
+  $search_form.submit(function(e){
+    e.preventDefault();
+  });
+
+  $search_label.click(function(){
+    $search_form.addClass('main-nav__elem-search--active');
+    $(this).hide();
+  });
+
+  $(document).mouseup(function (e){
+    if (!$search_form.is(e.target) && $search_form.has(e.target).length === 0) {
+      if($search_input.val() != ''){
+        return false;
+      }
+      $search_form.removeClass('main-nav__elem-search--focus-in');
+      $search_form.removeClass('main-nav__elem-search--focus-out');
+      $search_form.removeClass('main-nav__elem-search--active');
+      $search_label.show();
+    }
+
+  });
+
+  $search_input.focusin(function(){
+    $search_form.addClass('main-nav__elem-search--focus-in');
+    $search_form.removeClass('main-nav__elem-search--focus-out');
+  });
+
+  $search_input.focusout(function(){
+    $search_form.addClass('main-nav__elem-search--focus-out');
+    $search_form.removeClass('main-nav__elem-search--focus-in');
+  })
+});
+
 
 function submitSubscribe(){
   // code ...
